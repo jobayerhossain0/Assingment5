@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh | Blogs</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="bg-[#F9F7F3] py-5 sticky top-0 z-50">
+      <div
+        class="lg:hidden flex items-center justify-center pb-4 border-b mb-4"
+      >
+        <a class="flex items-center justify-start gap-2" href="/"
+          ><img src="/assets/logo.png" alt="" srcset="" />
+          <h3 class="text-xl font-semibold">Donate Bangladesh</h3></a
+        >
+      </div>
+      <div
+        class="container px-6 mx-auto flex lg:flex-row justify-between items-center"
+      >
+        <div class="">
+          <a href="/"
+            ><button class="btn bg-[#B4F461] text-xl font-semibold px-8">
+              Home
+            </button></a
+          >
+        </div>
+        <div class="hidden lg:block">
+          <a class="flex items-center justify-start gap-2" href="/"
+            ><img src="/assets/logo.png" alt="" srcset="" />
+            <h3 class="text-xl font-semibold">Donate Bangladesh</h3></a
+          >
+        </div>
+        <div class="flex items-center justify-start gap-2">
+          <img src="/assets/coin.png" alt="" />
+          <h6 id="available_balance" class="font-medium text-xl">5500 BDT</h6>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-[100px]">
+        <div class="container px-6 mx-auto space-y-6">
+          <h1 class="font-bold text-3xl">Important FAQ</h1>
+
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+              What is Document Object Model (DOM)?
+            </div>
+            <div class="collapse-content">
+              <p>
+                The html DOM is a standard object model and programming
+                interface for HTML. It defines the HTML elements as objects The
+                properties of all HTML elements The methods to access all HTML
+                elements The events for all HTML elements
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+              How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                I can select an element from the dom by defining an id on the
+                element and document.getElementById method
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+              What is event delegation in the context of the DOM, and why is it
+              useful?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Event delegation is a technique in the context of the DOM where
+                a single event listener is attached to a parent element to
+                handle events for its child elements, rather than adding
+                multiple event listeners to individual child elements. It is
+                useful because of improved performance, dynamic content
+                handling, and simplified code.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">
+              How do you manipulate an element's attributes and styles using the
+              DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                I can manipulate an elements attributes with methods like
+                getAttribute(), setAttribute(), or by directly modifying the
+                property and styles using the style property or by adding or
+                removing CSS classes with classList.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="h-40 bg-[#F9F7F3]"></footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

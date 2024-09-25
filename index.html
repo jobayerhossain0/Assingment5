@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Bangladesh</title>
+
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
 
@@ -24,14 +25,26 @@
     />
   </head>
   <body>
-    <header class="bg-[#F9F7F3] py-5">
-      <div class="container mx-auto flex justify-between items-center">
-        <div>
-          <button class="btn bg-[#B4F461] text-xl font-semibold px-8">
-            Blog
-          </button>
+    <header class="bg-[#F9F7F3] py-5 sticky top-0 z-50">
+      <div
+        class="lg:hidden flex items-center justify-center pb-4 border-b mb-4"
+      >
+        <a class="flex items-center justify-start gap-2" href="/"
+          ><img src="/assets/logo.png" alt="" srcset="" />
+          <h3 class="text-xl font-semibold">Donate Bangladesh</h3></a
+        >
+      </div>
+      <div
+        class="container px-6 mx-auto flex lg:flex-row justify-between items-center"
+      >
+        <div class="">
+          <a href="/blog.html"
+            ><button class="btn bg-[#B4F461] text-xl font-semibold px-8">
+              Blog
+            </button></a
+          >
         </div>
-        <div>
+        <div class="hidden lg:block">
           <a class="flex items-center justify-start gap-2" href="/"
             ><img src="/assets/logo.png" alt="" srcset="" />
             <h3 class="text-xl font-semibold">Donate Bangladesh</h3></a
@@ -43,9 +56,10 @@
         </div>
       </div>
     </header>
+
     <main>
       <section class="py-[100px]">
-        <div class="container mx-auto space-y-8">
+        <div class="container px-6 mx-auto space-y-8">
           <div role="tablist" class="tabs tabs-lifted">
             <input
               type="radio"
@@ -62,9 +76,13 @@
               <div class="space-y-6">
                 <!-- card 1 -->
                 <div
-                  class="p-5 border flex items-center justify-start rounded-xl gap-x-6"
+                  class="p-5 border flex flex-col lg:flex-row gap-y-6 items-center justify-start rounded-xl gap-x-6"
                 >
-                  <img class="basis-1/2" src="/assets/noakhali.png" alt="" />
+                  <img
+                    class="basis-1/2 w-full h-auto"
+                    src="/assets/noakhali.png"
+                    alt=""
+                  />
                   <div
                     class="basis-1/2 flex flex-col items-start justify-between gap-5"
                   >
@@ -90,7 +108,6 @@
                       in need.
                     </p>
                     <form
-                      onsubmit=""
                       id="noakhali_donate_form"
                       class="w-full space-y-6"
                       action=""
@@ -108,8 +125,8 @@
                       <div class="w-full">
                         <button
                           type="submit"
-                          id="feni_donate_btn"
                           class="btn bg-[#B4F461] text-xl font-semibold px-8 w-full"
+                          id="noakhali_donate_btn"
                         >
                           Donate Now
                         </button>
@@ -119,9 +136,13 @@
                 </div>
                 <!-- card 2 -->
                 <div
-                  class="p-5 border flex items-center justify-start rounded-xl gap-x-6"
+                  class="p-5 border flex flex-col lg:flex-row gap-y-6 items-center justify-start rounded-xl gap-x-6"
                 >
-                  <img class="basis-1/2" src="/assets/feni.png" alt="" />
+                  <img
+                    class="basis-1/2 w-full h-auto"
+                    src="/assets/feni.png"
+                    alt=""
+                  />
                   <div
                     class="basis-1/2 flex flex-col items-start justify-between gap-5"
                   >
@@ -129,7 +150,9 @@
                       <span
                         class="flex items-center justify-start bg-[#F3F3F3] px-4 py-2 rounded-lg gap-1"
                         ><img src="/assets/coin.png" alt="" />
-                        <h6 class="">0 BDT</h6></span
+                        <h6 class="">
+                          <span id="total_feni_amount">0</span> BDT
+                        </h6></span
                       >
                     </div>
                     <h6 class="font-bold text-xl">
@@ -153,6 +176,7 @@
                     >
                       <div class="w-full">
                         <input
+                          id="feni_input"
                           class="border w-full rounded-lg px-4 py-4"
                           type="number"
                           placeholder="Write Donation Amount"
@@ -174,7 +198,7 @@
                 </div>
                 <!-- card 3 -->
                 <div
-                  class="p-5 border flex items-center justify-start rounded-xl gap-x-6"
+                  class="p-5 border flex flex-col lg:flex-row gap-y-6 items-center justify-start rounded-xl gap-x-6"
                 >
                   <img
                     class="basis-1/2"
@@ -188,7 +212,9 @@
                       <span
                         class="flex items-center justify-start bg-[#F3F3F3] px-4 py-2 rounded-lg gap-1"
                         ><img src="/assets/coin.png" alt="" />
-                        <h6 class="">0 BDT</h6></span
+                        <h6 class="">
+                          <span id="total_quota_amount">0</span> BDT
+                        </h6></span
                       >
                     </div>
                     <h6 class="font-bold text-xl">
@@ -213,6 +239,7 @@
                     >
                       <div class="w-full">
                         <input
+                          id="quota_input"
                           class="border w-full rounded-lg px-4 py-4"
                           type="number"
                           placeholder="Write Donation Amount"
@@ -246,44 +273,31 @@
               role="tabpanel"
               class="tab-content bg-base-100 border-base-300 rounded-box p-6"
             >
-              <div class="space-y-6">
-                <!-- history card  -->
-                <div class="border p-6 rounded-lg space-y-2">
-                  <h6 class="font-bold text-xl">
-                    96500 Taka is Donated for famine-2024 at Feni, Bangladesh
-                  </h6>
-                  <p class="text-sm">
-                    Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
-                    Standard Time)
-                  </p>
-                </div>
-                <!-- history card  -->
-                <div class="border p-6 rounded-lg space-y-2">
-                  <h6 class="font-bold text-xl">
-                    96500 Taka is Donated for famine-2024 at Feni, Bangladesh
-                  </h6>
-                  <p class="text-sm">
-                    Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
-                    Standard Time)
-                  </p>
-                </div>
-                <!-- history card  -->
-                <div class="border p-6 rounded-lg space-y-2">
-                  <h6 class="font-bold text-xl">
-                    96500 Taka is Donated for famine-2024 at Feni, Bangladesh
-                  </h6>
-                  <p class="text-sm">
-                    Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
-                    Standard Time)
-                  </p>
-                </div>
-              </div>
+              <div id="histories" class="space-y-6"></div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="h-40 bg-[#F9F7F3]"></footer>
+
+    <!-- modal  -->
+
+    <dialog id="my_modal_2" class="modal">
+      <div class="modal-box space-y-4">
+        <h3 class="text-3xl font-bold text-center">Congratulations!</h3>
+        <div class="flex items-center justify-center">
+          <img class="text-center" src="/assets/coin.png" alt="" />
+        </div>
+        <p class="text-center">You have donated for humankind</p>
+        <p class="text-center font-bold">Successfully</p>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+
     <script src="/app.js"></script>
   </body>
 </html>
